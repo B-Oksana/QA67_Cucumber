@@ -24,4 +24,12 @@ public class HomePage extends BasePage {
         click(loginLink);
         return new LoginPage(driver);
     }
+
+    @FindBy(css = "[href='/register']" )
+    WebElement signUpLink;
+    public RegistrationPage clickOnSignUpLink() {
+        click(signUpLink);
+        return new RegistrationPage(driver);
+
+    }
 }

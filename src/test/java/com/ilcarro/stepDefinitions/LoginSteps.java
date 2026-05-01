@@ -45,5 +45,12 @@ public class LoginSteps {
         login.verifyMessage("Login failed");
     }
 
+    @And("User enters incorrect email and correct password")
+    public void enter_wrong_email(DataTable table) {
+        login= new LoginPage(driver);
+        login.enterWrongEmail(table);
+    }
+
+
 
 }

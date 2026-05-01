@@ -48,4 +48,19 @@ public class LoginPage extends BasePage {
 
         return this;
     }
+
+
+    public LoginPage enterWrongEmail(DataTable table) {
+        List<Map<String, String>> data_Table = table.asMaps();
+
+        String email = data_Table.get(0).get("email");
+        String password = data_Table.get(0).get("password");
+
+        enterData(email,password);
+        return this;
+    }
+
+
+
+
 }
